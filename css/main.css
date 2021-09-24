@@ -1,0 +1,102 @@
+/* Typefaces declared in another file */
+@import 'fonts.css';
+
+/* -- denotes a variable that affects the rest of the css */
+:root {
+  font-family: Gambarino;
+  --highlight-subtle: #D7F476;
+  --highlight-bold: yellow;
+}
+
+body {
+  font-size: calc(2em + 2vw);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+}
+
+h1, h2 {
+  display: none;
+  visibility: hidden;
+}
+
+footer {
+  place-self: end;
+  margin-bottom: 4em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+img {
+  border-radius: 100%;
+  height: inherit;
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Flexbox alignment for table rows  */
+li {
+  border-bottom: 1px solid black;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1em;
+}
+
+a {
+  color: inherit;
+}
+
+.table a {
+  text-decoration: none;
+}
+
+/* Non-link rows */
+.table a li:hover, .table a li:focus {
+  background-color: var(--highlight-subtle);
+}
+
+/* Link row */
+.table [href="burger/index.htm"] li {
+  justify-content: center;
+  text-align: center;
+  padding-right: 0;
+}
+
+/* Learn more about data attributes here */
+.table [href="burger/index.htm"] li:hover, .table [href="burger/index.htm"] li:focus {
+  background-color: var(--highlight-bold);
+}
+
+/* Cooked burger page */
+#burger main {
+  text-align: center;
+  padding-top: 2em;
+}
+
+#burger h1 {
+  display: block;
+  visibility: visible;
+  position: absolute;
+  right: 0;
+  left: 0;
+  color: white;
+  text-transform: uppercase;
+  hyphens: auto;
+  word-wrap: break-word;
+  line-height: 0.9em;
+}
+
+#burger img {
+  max-height: 50vh;
+  border-radius: 2em;
+}
